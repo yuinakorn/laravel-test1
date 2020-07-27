@@ -18,9 +18,11 @@ Route::get('/', function () {
 });
 
 Route::resource('user', 'UsersController');
+// Route::resource('home', 'UsersController');
+// Route::resource('userr', 'UsersController');
 
 Route::get('/home', function () {
-    return view('home');
+    return view('user.home');
 });
 
 // Route::get('/create', function () {

@@ -24,7 +24,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('create');
+        return view('user.create');
         
     }
 
@@ -44,7 +44,8 @@ class UsersController extends Controller
         ]);
 
         $user->save();
-        return redirect()->action('UsersController@index')->with('success', 'บันทึกข้อมูลสำเร็จ');
+        // return redirect()->action('UsersController@index')->with('success', 'บันทึกข้อมูลสำเร็จ');
+        return redirect()->route('user.create')->with('success', 'บันทึกข้อมูลสำเร็จ');
         // return redirect('home');
     }
 
